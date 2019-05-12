@@ -1,0 +1,20 @@
+package java20190511;
+
+public class Car3 {
+int speed;
+
+void run() {
+System.out.println("달린다.");
+}
+
+
+
+public static void main(String[] args) {
+//speed=10; 불가능  스테틱이 아님 
+//run(); 불가능 스테틱이 아님
+aa(); //가능 스테틱이기때문에
+}
+static void aa() {
+System.out.println("덥습니다.");
+}
+}
