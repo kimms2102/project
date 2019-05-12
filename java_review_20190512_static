@@ -1,0 +1,36 @@
+package java20190511;
+
+public class ClassName {
+//인스턴스 멤머(필드,매소드)
+int field1;
+void method1() {
+System.out.println("인스턴스 메소드");
+}
+//정적멤버(필드, 메소드)
+static int field2;
+static void method2() {
+System.out.println("클래스 메소드");
+}
+
+//정적초기화블록
+static {
+field2 = 10;
+method2();
+//field1 = 10; 에러
+//method1(); 에러
+}
+static void method3() {
+System.out.println("클래스 메소드2");
+field2 = 10;
+method2();
+//정적영역끼리 호출하거 쓰는거는 가능
+//this.field1 = 10; 정적멤버가 인스턴스 멤버를 사용하는것은 불가능 에러
+//this.method1(); 정적멤버가 인스턴스 멤버를 사용하는것은 불가능  에러
+}
+void method4() {
+this.field1=10;
+this.method1();
+field2=10;
+method2();
+}
+}
